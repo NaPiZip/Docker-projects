@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Install packages
-sudo apt install dnsmasq hostapd -y
+sudo apt-get --fix-borken install
+sudo apt-get install dnsmasq hostapd -y
 
 # Turn off services
 sudo systemctl stop dnsmasq
