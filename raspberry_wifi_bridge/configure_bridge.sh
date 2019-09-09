@@ -8,6 +8,7 @@ sudo systemctl stop hostapd
 if [ ! -f /etc/dhcpcd.conf.old ]; then
   sudo mv /etc/dhcpcd.conf /etc/dhcpcd.conf.old
 fi
+sudo cp dhcpcd.conf /etc/dhcpcd.conf
 
 # Append at the begining
 sudo sed -i '1idenyinterfaces wlan0\ndenyinterfaces eth0' /etc/dhcpcd.conf
