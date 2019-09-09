@@ -23,3 +23,6 @@ sudo systemctl restart systemd-networkd
 
 # Change accespoit settings
 sudo cp hostapd_bridge.conf /etc/hostapd/hostapd.conf
+
+echo "brctl addbr br0" >> /etc/dnsmasq.conf
+echo "brctl addif br0 eth0" >> /etc/dnsmasq.conf
