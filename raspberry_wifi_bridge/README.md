@@ -1,6 +1,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Raspberry_Pi_Logo.svg/1200px-Raspberry_Pi_Logo.svg.png" alt="Raspberry_Pi_Logo" height="42px" width="42px" align="left"><br>
 
-# Docker Toolbox Notes
+# Raspberry Pi WiFi Bridge
 <div>
     <a href="https://github.com/NaPiZip/Tipps-and-tricks">
         <img src="https://img.shields.io/badge/Document%20Version-0.0.1-green.svg"/>
@@ -9,7 +9,6 @@
         <img src="https://img.shields.io/badge/RP%20Image-2019--07--10--raspbian--buster--lite-blue"/>
     </a>
 </div>
-
 
 ## The System Architecture
 The following image shows the system architecture. The Raspberry Pi is used as an access point in order to provide WiFi for the workstations. The traffic between Raspberry Pi and workstations is forwarded via NAT (Network Address Translation) between `etho` and the `wlan0` interface. On the Raspberry Pi is a `hostapd` running which is setting up de WiFi connection, the local `DCHP` then assigns the IP addresses to the workstations within the range of `192.168.4.2 - 192.168.4.20`. Also a local instance of an `DNS` server is running dealing with the resolving the domain names and IP addresses.
